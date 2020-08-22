@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import CounterHeader from '../CounterHeader/CounterHeader'
 import CounterButton from '../CounterButton/CounterButton'
+import CounterDisplay from '../CounterDisplay/CounterDisplay'
 
 export default function StateObject() {
   const [stateObject, setStateObject] = useState(() => {
@@ -29,7 +30,7 @@ export default function StateObject() {
         descriptionText={stateObject.description}
       />
       <CounterButton click={changeCount} increase={'false'} />
-      <div>{stateObject.count}</div>
+      <CounterDisplay value={stateObject.count} />
       <CounterButton click={changeCount} increase={'true'} />
     </>
   )

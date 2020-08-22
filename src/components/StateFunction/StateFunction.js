@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import CounterHeader from '../CounterHeader/CounterHeader'
 import CounterButton from '../CounterButton/CounterButton'
+import CounterDisplay from '../CounterDisplay/CounterDisplay'
 
 export default function StateFunction() {
   // using a function here takes an argument, and then returns a value for the
@@ -28,7 +29,7 @@ export default function StateFunction() {
         }
       />
       <CounterButton click={changeCount} increase={'false'} />
-      <div>{stateFunction}</div>
+      <CounterDisplay value={stateFunction} />
       <CounterButton click={changeCount} increase={'true'} />
     </>
   )
