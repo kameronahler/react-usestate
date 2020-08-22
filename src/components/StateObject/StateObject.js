@@ -25,7 +25,7 @@ export default function StateObject() {
   return (
     <>
       <CounterHeader
-        headingText={'Set state with a destructured object'}
+        headingText={'Set multiple states with an object'}
         descriptionText={stateObject.description}
       />
       <CounterButton click={changeCount} increase={'false'} />
