@@ -1,6 +1,14 @@
 import React from 'react'
-import CounterSimple from '../CounterSimple/CounterSimple'
+import StateSimple from '../StateSimple/StateSimple'
+import StateFunction from '../StateFunction/StateFunction'
+import StateObject from '../StateObject/StateObject'
 
 export default function App() {
-  return <CounterSimple />
+  return (
+    <>
+      <StateSimple />
+      <StateFunction />
+      <StateObject />
+    </>
+  )
 }
