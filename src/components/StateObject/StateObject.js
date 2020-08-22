@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import CounterHeader from '../CounterHeader/CounterHeader'
+import CounterButton from '../CounterButton/CounterButton'
 
 export default function StateObject() {
   const [stateObject, setStateObject] = useState(() => {
@@ -27,13 +28,9 @@ export default function StateObject() {
         headingText={'Set state with a destructured object'}
         descriptionText={stateObject.description}
       />
-      <button data-increase={'false'} onClick={changeCount}>
-        -
-      </button>
+      <CounterButton click={changeCount} increase={'false'} />
       <div>{stateObject.count}</div>
-      <button data-increase={'true'} onClick={changeCount}>
-        +
-      </button>
+      <CounterButton click={changeCount} increase={'true'} />
     </>
   )
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import CounterHeader from '../CounterHeader/CounterHeader'
+import CounterButton from '../CounterButton/CounterButton'
 
 export default function StateFunction() {
   // using a function here takes an argument, and then returns a value for the
@@ -26,13 +27,9 @@ export default function StateFunction() {
           'Will only be run on initial load mount, allowing for expensive logic initially, and basic changes later'
         }
       />
-      <button data-increase={'false'} onClick={changeCount}>
-        -
-      </button>
+      <CounterButton click={changeCount} increase={'false'} />
       <div>{stateFunction}</div>
-      <button data-increase={'true'} onClick={changeCount}>
-        +
-      </button>
+      <CounterButton click={changeCount} increase={'true'} />
     </>
   )
 }

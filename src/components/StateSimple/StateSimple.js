@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import CounterHeader from '../CounterHeader/CounterHeader'
+import CounterButton from '../CounterButton/CounterButton'
 
 export default function StateSimple() {
   const [stateSimple, setStateSimple] = useState(0) // resets state on every mount
@@ -20,13 +21,9 @@ export default function StateSimple() {
           'Uses initial useState on mount as basis for state forever'
         }
       />
-      <button data-increase={'false'} onClick={changeCount}>
-        -
-      </button>
+      <CounterButton click={changeCount} increase={'false'} />
       <div>{stateSimple}</div>
-      <button data-increase={'true'} onClick={changeCount}>
-        +
-      </button>
+      <CounterButton click={changeCount} increase={'true'} />
     </>
   )
 }
