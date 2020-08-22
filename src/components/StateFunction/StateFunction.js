@@ -28,9 +28,13 @@ export default function StateFunction() {
           'Will only be run on initial load mount, allowing for expensive logic initially, and basic changes later'
         }
       />
-      <CounterButton click={changeCount} increase={'false'} />
-      <CounterDisplay value={stateFunction} />
-      <CounterButton click={changeCount} increase={'true'} />
+      <div className='counter__display-wrapper'>
+        <CounterDisplay value={stateFunction} />
+        <div>
+          <CounterButton click={changeCount} increase={'false'} />
+          <CounterButton click={changeCount} increase={'true'} />
+        </div>
+      </div>
     </section>
   )
 }

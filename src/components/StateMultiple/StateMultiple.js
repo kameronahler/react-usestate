@@ -26,9 +26,13 @@ export default function StateMultiple() {
         headingText={'Set multiple states with multiple hooks'}
         descriptionText={description}
       />
-      <CounterButton click={changeCount} increase={'false'} />
-      <CounterDisplay value={count} />
-      <CounterButton click={changeCount} increase={'true'} />
+      <div className='counter__display-wrapper'>
+        <CounterDisplay value={count} />
+        <div>
+          <CounterButton click={changeCount} increase={'false'} />
+          <CounterButton click={changeCount} increase={'true'} />
+        </div>
+      </div>
     </section>
   )
 }

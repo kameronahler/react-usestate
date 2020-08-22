@@ -1,10 +1,14 @@
 :root {
   --color-bg: #0d3f67;
-  --color-counter: #f2f4f6;
+  --color-white: #f2f4f6;
+  --color-accent: #1ee3cf;
+  --color-button: #6b48ff;
+  --font-family-serif: 'DM Serif Display', serif;
+
+  background-color: var(--color-bg);
 }
 
 .app-root {
-  background-color: var(--color-bg);
   font-family: 'DM Sans', sans-serif;
   padding: 2rem;
 
@@ -25,24 +29,72 @@
 }
 
 .counter {
-  background-color: var(--color-counter);
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 2rem;
-  padding: 1rem;
+  overflow: hidden;
+  padding: 2rem;
+
   @media (min-width: 48em) {
     margin-bottom: unset;
-    padding: 2rem;
+    padding: 3rem;
   }
 
   &__heading,
   &__description {
+    color: var(--color-bg);
     margin-top: unset;
   }
 
   &__heading {
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--font-family-serif);
     font-size: clamp(1.5rem, 1.5vw, 4rem);
+    text-shadow: 2px 2px 0 var(--color-accent);
+    margin-bottom: 2em;
   }
+
   &__description {
     font-size: clamp(1.125rem, 1.125vw, 2rem);
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__display-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-top: auto;
+  }
+
+  &__display {
+    bottom: -1rem;
+    color: var(--color-accent);
+    font-family: var(--font-family-serif);
+    font-size: clamp(3rem, 20vw, 10rem);
+    left: 0;
+    line-height: 1;
+    opacity: 0.25;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+
+  &__button {
+    background-color: var(--color-button);
+    border-radius: 0.5em;
+    border: none;
+    color: var(--color-white);
+    height: 3rem;
+    position: relative;
+    width: 3rem;
+    z-index: 1;
+
+    &:not(:last-of-type) {
+      margin-right: 0.5rem;
+    }
   }
 }

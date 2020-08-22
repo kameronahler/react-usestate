@@ -22,9 +22,13 @@ export default function StateSimple() {
           'Uses initial useState on mount as basis for state forever'
         }
       />
-      <CounterButton click={changeCount} increase={'false'} />
-      <CounterDisplay value={stateSimple} />
-      <CounterButton click={changeCount} increase={'true'} />
+      <div className='counter__display-wrapper'>
+        <CounterDisplay value={stateSimple} />
+        <div>
+          <CounterButton click={changeCount} increase={'false'} />
+          <CounterButton click={changeCount} increase={'true'} />
+        </div>
+      </div>
     </section>
   )
 }

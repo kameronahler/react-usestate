@@ -29,9 +29,13 @@ export default function StateObject() {
         headingText={'Set multiple states with an object'}
         descriptionText={stateObject.description}
       />
-      <CounterButton click={changeCount} increase={'false'} />
-      <CounterDisplay value={stateObject.count} />
-      <CounterButton click={changeCount} increase={'true'} />
+      <div className='counter__display-wrapper'>
+        <CounterDisplay value={stateObject.count} />
+        <div>
+          <CounterButton click={changeCount} increase={'false'} />
+          <CounterButton click={changeCount} increase={'true'} />
+        </div>
+      </div>
     </section>
   )
 }
