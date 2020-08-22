@@ -24,7 +24,7 @@ export default function StateObject() {
   }
 
   return (
-    <>
+    <section className='counter'>
       <CounterHeader
         headingText={'Set multiple states with an object'}
         descriptionText={stateObject.description}
@@ -32,6 +32,6 @@ export default function StateObject() {
       <CounterButton click={changeCount} increase={'false'} />
       <CounterDisplay value={stateObject.count} />
       <CounterButton click={changeCount} increase={'true'} />
-    </>
+    </section>
   )
 }

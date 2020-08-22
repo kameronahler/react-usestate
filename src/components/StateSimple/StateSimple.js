@@ -15,7 +15,7 @@ export default function StateSimple() {
   }
 
   return (
-    <>
+    <section className='counter'>
       <CounterHeader
         headingText={'Set initial state statically'}
         descriptionText={
@@ -25,6 +25,6 @@ export default function StateSimple() {
       <CounterButton click={changeCount} increase={'false'} />
       <CounterDisplay value={stateSimple} />
       <CounterButton click={changeCount} increase={'true'} />
-    </>
+    </section>
   )
 }

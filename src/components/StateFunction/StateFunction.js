@@ -21,7 +21,7 @@ export default function StateFunction() {
   }
 
   return (
-    <>
+    <section className='counter'>
       <CounterHeader
         headingText={'Set state initially with function'}
         descriptionText={
@@ -31,6 +31,6 @@ export default function StateFunction() {
       <CounterButton click={changeCount} increase={'false'} />
       <CounterDisplay value={stateFunction} />
       <CounterButton click={changeCount} increase={'true'} />
-    </>
+    </section>
   )
 }

@@ -21,7 +21,7 @@ export default function StateMultiple() {
   }
 
   return (
-    <>
+    <section className='counter'>
       <CounterHeader
         headingText={'Set multiple states with multiple hooks'}
         descriptionText={description}
@@ -29,6 +29,6 @@ export default function StateMultiple() {
       <CounterButton click={changeCount} increase={'false'} />
       <CounterDisplay value={count} />
       <CounterButton click={changeCount} increase={'true'} />
-    </>
+    </section>
   )
 }

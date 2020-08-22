@@ -6,11 +6,11 @@ import StateMultiple from '../StateMultiple/StateMultiple'
 
 export default function App() {
   return (
-    <>
+    <div className='counters'>
       <StateSimple />
       <StateFunction />
       <StateObject />
       <StateMultiple />
-    </>
+    </div>
   )
 }
